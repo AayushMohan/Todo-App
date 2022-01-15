@@ -21,6 +21,7 @@ const FormControl = styled.div`
     font: inherit;
     line-height: 1.5rem;
     padding: 0 0.25rem;
+    border-radius: 5px;
   }
 
   & input:focus {
@@ -62,7 +63,7 @@ const CourseInput = (props) => {
 
   return (
     <form onSubmit={formSubmitHandler}>
-      <FormControl>
+      <FormControl className={!isValid && "invalid"}>
         <label>Course Goal</label>
         <input type="text" onChange={goalInputChangeHandler} />
       </FormControl>
